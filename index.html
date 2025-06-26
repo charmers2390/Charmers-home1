@@ -2,57 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Charmers Bracelets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charmers | Our Bracelets</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ff66a6;
+      color: white;
+      padding: 20px;
       text-align: center;
+    }
+    main {
       padding: 20px;
     }
     h1 {
-      color: #800080;
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    .pricing {
+      font-weight: bold;
+      font-size: 1.1em;
     }
     .bracelet {
-      margin-top: 20px;
+      margin: 30px 0;
     }
     .bracelet img {
-      max-width: 80%;
-      height: auto;
+      width: 100%;
+      max-width: 300px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     footer {
+      text-align: center;
+      padding: 15px;
       margin-top: 40px;
+      background-color: #eee;
       font-size: 0.9em;
     }
-    a {
-      color: #800080;
+    nav a {
       margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Our Bracelets</h1>
-  <p>Affordable, colorful, and custom-made just for you!</p>
-  <p><strong>Basic Bracelet:</strong> $1<br>
-     <strong>Normal Bracelet:</strong> $4<br>
-     <strong>Custom Bracelet:</strong> $6</p>
+  <header>
+    <h1>Charmers Bracelets</h1>
+    <p>Affordable, colorful, and custom-made just for you!</p>
+  </header>
 
-  <div class="bracelet">
-    <h2>Bracelet Example 1</h2>
-    <img src="bracelet1.jpg" alt="Bracelet Example 1">
-  </div>
+  <main>
+    <p class="pricing">Basic Bracelet: $1<br>
+    Normal Bracelet: $4<br>
+    Custom Bracelet: $6</p>
 
-  <div class="bracelet">
-    <h2>Bracelet Example 2</h2>
-    <img src="bracelet2.jpg" alt="Bracelet Example 2">
-  </div>
+    <div class="bracelet">
+      <h2>Bracelet Example 1</h2>
+      <img src="https://i.imgur.com/AEqNeHu.jpeg" alt="Pink Braided Charmers Bracelet">
+    </div>
+
+    <div class="bracelet">
+      <h2>Bracelet Example 2</h2>
+      <img src="https://i.imgur.com/bWY49w3.jpeg" alt="Blue and Pink Woven Charmers Bracelet">
+    </div>
+  </main>
 
   <footer>
-    <a href="#">Careers</a> |
-    <a href="#">Sponsored Careers</a> |
-    <a href="#">Privacy Policy</a><br><br>
-    &copy; 2025 Charmers. All rights reserved.
+    <nav>
+      <a href="/careers">Careers</a> |
+      <a href="/sponsored-careers">Sponsored Careers</a> |
+      <a href="/privacy">Privacy Policy</a>
+    </nav>
+    <p>&copy; 2025 Charmers. All rights reserved.</p>
   </footer>
 </body>
 </html>
