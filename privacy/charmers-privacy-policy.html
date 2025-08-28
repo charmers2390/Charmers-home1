@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charmers Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --card: #14141a;
+      --ink: #f5f5f7;
+      --muted: #b8b8bf;
+      --accent: #7a5cff;
+      --accent-2: #ff59c7;
+      --ok: #60d394;
+      --warn: #ffcf5c;
+      --bad: #ff6b6b;
+    }
+    html, body { background: var(--bg); color: var(--ink); margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { position: sticky; top: 0; background: rgba(15,15,18,.9); backdrop-filter: blur(10px); z-index: 5; border-bottom: 1px solid #222; }
+    header .wrap { display: flex; align-items: center; gap: 1rem; padding: .85rem 1rem; max-width: 1200px; margin: 0 auto; }
+    .brand { font-weight: 800; letter-spacing: .3px; }
+    .pill { padding: .25rem .6rem; border: 1px solid #333; border-radius: 999px; font-size: .8rem; color: var(--muted); }
+    main { max-width: 1200px; margin: 0 auto; padding: 1rem; display: grid; grid-template-columns: 320px 1fr; gap: 1rem; }
+    nav { position: sticky; top: 60px; align-self: start; }
+    .toc { background: var(--card); border: 1px solid #26262d; border-radius: 12px; padding: 1rem; max-height: calc(100vh - 90px); overflow: auto; }
+    .toc h3 { margin-top: 0; font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .toc a { display: block; padding: .3rem 0; color: var(--ink); opacity: .9; }
+    .toc a small { color: var(--muted); }
+    .content { background: var(--card); border: 1px solid #26262d; border-radius: 12px; padding: 1.2rem 1.2rem 2rem; }
+    h1 { line-height: 1.15; margin:.5rem 0 0.75rem; }
+    h2 { border-top: 1px dashed #2b2b34; padding-top: 1.2rem; margin-top: 1.8rem; }
+    h3 { color: var(--muted); margin-top: 1.2rem; }
+    .kicker { color: var(--muted); }
+    .badge { display: inline-block; border: 1px solid #2b2b34; border-radius: 8px; padding: .25rem .5rem; margin-right: .5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: .75rem; }
+    .card { background: #0f0f13; border: 1px solid #23232c; border-radius: 12px; padding: .9rem 1rem; }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: .95em; }
+    .note { border-left: 3px solid var(--warn); padding: .6rem .8rem; background: #17171d; }
+    .ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); }
+    .foot { color: var(--muted); font-size: .9rem; margin-top: 2rem; }
+    .btns { display:flex; gap:.5rem; flex-wrap: wrap; }
+    .btn { display:inline-block; border:1px solid #333; padding:.5rem .8rem; border-radius:8px; cursor:pointer; }
+    .btn:hover { background:#1b1b22; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #2a2a33; padding: .6rem .5rem; text-align: left; vertical-align: top; }
+    th { background: #1a1a22; }
+    .small { font-size:.95rem; color: var(--muted); }
+    .hr { height:1px; background:#23232b; border:0; margin:1rem 0; }
+    @media (max-width: 980px) { main { grid-template-columns: 1fr; } nav { position: static; } .toc { max-height:none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">Charmers Privacy Policy</div>
+      <span class="pill">Effective: July 21, 2025</span>
+      <span class="pill">Last updated: August 27, 2025</span>
+      <span class="pill">Version: 1.3</span>
+      <div class="btns" style="margin-left:auto">
+        <button class="btn" onclick="window.print()">Print</button>
+        <button class="btn" onclick="location.href='#contact'">Contact Us</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav>
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <a href="#who-we-are">1. Who We Are & Scope</a>
+        <a href="#definitions">2. Definitions</a>
+        <a href="#collection">3. Information We Collect</a>
+        <a href="#sources">4. Sources of Information</a>
+        <a href="#uses">5. How We Use Information</a>
+        <a href="#legal-bases">6. Legal Bases (EEA/UK)</a>
+        <a href="#sharing">7. Sharing & Disclosures</a>
+        <a href="#payments">8. Payments (Stripe, Wallets)</a>
+        <a href="#cookies">9. Cookies & Similar Tech</a>
+        <a href="#ads-analytics">10. Analytics, Fraud & Security</a>
+        <a href="#retention">11. Data Retention</a>
+        <a href="#security">12. Security</a>
+        <a href="#transfers">13. International Transfers</a>
+        <a href="#your-rights">14. Your Privacy Rights</a>
+        <a href="#state-disclosures">15. U.S. State Disclosures</a>
+        <a href="#children">16. Children’s Privacy</a>
+        <a href="#social">17. Social, UGC & Public Posts</a>
+        <a href="#third-parties">18. Third‑Party Links & Sites</a>
+        <a href="#changes">19. Changes to This Policy</a>
+        <a href="#contact">20. How to Contact Us</a>
+        <hr class="hr">
+        <a href="#annex-a"><small>Annex A</small> — Data Categories & Retention</a>
+        <a href="#annex-b"><small>Annex B</small> — Cookie & Storage Catalog</a>
+        <a href="#annex-c"><small>Annex C</small> — CLU Logistics & Tracking</a>
+        <a href="#annex-d"><small>Annex D</small> — Stripe Data Flow (Narrative)</a>
+        <a href="#glossary"><small>Glossary</small> — Key Terms</a>
+      </div>
+    </nav>
+
+    <section class="content">
+      <p class="kicker">This Privacy Policy explains how <strong>Charmers Business USA</strong> (“<strong>Charmers</strong>,” “we,” “us,” or “our”) collects, uses, discloses, and safeguards information when you visit our websites, purchase bracelets or accessories, use our logistics services, or interact with our customer support.</p>
+
+      <div class="grid">
+        <div class="card">
+          <strong>Covered Services & Sites</strong>
+          <ul>
+            <li><span class="mono">charmersbiz.org</span> (storefront & support)</li>
+            <li><span class="mono">home.charmersbiz.org</span> (brand pages)</li>
+            <li><span class="mono">hires.charmersbiz.org</span> (job applications; human verification used)</li>
+            <li><span class="mono">demo.charmersbiz.org</span> (kiosk/read‑only demos)</li>
+            <li><span class="mono">track.clu.charmersbiz.org</span> (tracking for CLU)</li>
+            <li><span class="mono">lunabotai.com</span> &amp; <span class="mono">chat.lunabotai.com</span> (AI services owned by Charmers)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>How to Reach Us</strong>
+          <p>Email: <a href="mailto:support@charmersbiz.org">support@charmersbiz.org</a> or <a href="mailto:office@charmersbiz.org">office@charmersbiz.org</a><br>
+          Phone: <a href="tel:+19316230425">+1 (931) 623‑0425</a><br>
+          Text (support): <a href="sms:+19315051417">+1 (931) 505‑1417</a></p>
+          <p class="small">Please do not send card numbers or other highly sensitive details over email or SMS.</p>
+        </div>
+      </div>
+
+      <h2 id="who-we-are">1) Who We Are & Scope</h2>
+      <p>Charmers designs, sells, and ships bracelets and related accessories, and operates the <em>Charmers Logistics Union</em> (“<strong>CLU</strong>”) to coordinate first‑mile handling and handoff to national carriers. We also operate AI/assistive services under the “LunaBot AI” brand. This Policy applies to your interactions with our Covered Services above. It does not apply to third‑party websites or services that we do not control.</p>
+      <p><strong>We do not sell or trade your personal information.</strong> We share information only as described in this Policy, such as with service providers (e.g., payment processors, security vendors, logistics partners) to operate our services.</p>
+
+      <h2 id="definitions">2) Definitions</h2>
+      <ul>
+        <li><strong>Personal Information (PI):</strong> Information that identifies, relates to, describes, or can reasonably be linked with an identifiable individual.</li>
+        <li><strong>Sensitive PI:</strong> Certain categories of PI (e.g., precise geolocation, financial account access credentials) granted special protection under applicable laws.</li>
+        <li><strong>Processing:</strong> Any operation performed on data (collection, storage, use, sharing, deletion).</li>
+        <li><strong>Controller / Business:</strong> The entity that decides why and how PI is processed (here, Charmers).</li>
+        <li><strong>Processor / Service Provider:</strong> An entity that processes PI on behalf of the Controller/Business (e.g., payment processing).</li>
+      </ul>
+
+      <h2 id="collection">3) Information We Collect</h2>
+      <h3>3.1 Information you provide</h3>
+      <ul>
+        <li><strong>Identity &amp; Contact:</strong> name, email, phone, shipping address, country.</li>
+        <li><strong>Order &amp; Customization:</strong> bracelet text, size, style selections, gift messages.</li>
+        <li><strong>Support &amp; Communications:</strong> messages sent via email, SMS, contact forms, or phone recordings as permitted by law.</li>
+        <li><strong>Employment/Contracting:</strong> job application data submitted on <span class="mono">hires.charmersbiz.org</span> (e.g., resume details) after human verification checks.</li>
+      </ul>
+
+      <h3>3.2 Information collected automatically</h3>
+      <ul>
+        <li><strong>Device &amp; Usage:</strong> IP address, browser, OS, device identifiers, referral URLs, pages viewed, time on site, and actions performed.</li>
+        <li><strong>Cookies &amp; Local Storage:</strong> preferences, session tokens, cart contents, fraud signals. See <a href="#cookies">Cookies</a>.</li>
+        <li><strong>Anti‑abuse telemetry:</strong> signals from security tools (e.g., bot detection, human verification) to protect our sites and users.</li>
+      </ul>
+
+      <h3>3.3 Information from third parties</h3>
+      <ul>
+        <li><strong>Payments:</strong> from payment processors (e.g., Stripe) regarding transaction status; <em>we do not receive full card numbers or CVCs</em>.</li>
+        <li><strong>Logistics:</strong> from carriers (e.g., USPS) and CLU systems for shipment status and delivery events.</li>
+        <li><strong>Fraud &amp; Security:</strong> from threat‑intel and verification services (e.g., CAPTCHA/Turnstile).</li>
+      </ul>
+
+      <h2 id="sources">4) Sources of Information</h2>
+      <p>We collect PI directly from you when you place an order or contact us; automatically via your use of our sites; and from service providers who help us complete payments, fulfill orders, and maintain security.</p>
+
+      <h2 id="uses">5) How We Use Information</h2>
+      <ul>
+        <li>To accept, process, fulfill, and deliver orders; provide order updates and receipts.</li>
+        <li>To operate CLU logistics, including pre‑handoff status and carrier integrations.</li>
+        <li>To process payments, refunds, and chargeback responses via our payment partners.</li>
+        <li>To provide customer support and respond to inquiries.</li>
+        <li>To maintain the security, integrity, and availability of our sites and services.</li>
+        <li>To improve products, quality, and experience; debug and develop new features.</li>
+        <li>To comply with legal obligations, tax and accounting requirements, and to prevent fraud.</li>
+        <li>With your consent, to send marketing communications (you can opt out at any time).</li>
+      </ul>
+
+      <h2 id="legal-bases">6) Legal Bases (EEA/UK)</h2>
+      <p>Where EU/UK laws apply, we process PI under these legal bases:</p>
+      <ul>
+        <li><strong>Contract:</strong> to perform a contract with you (e.g., fulfilling orders).</li>
+        <li><strong>Legitimate interests:</strong> securing our services, preventing fraud, improving operations.</li>
+        <li><strong>Legal obligation:</strong> complying with recordkeeping and financial laws.</li>
+        <li><strong>Consent:</strong> when required for certain communications or cookies.</li>
+      </ul>
+
+      <h2 id="sharing">7) Sharing & Disclosures</h2>
+      <p>We share PI with the following categories of recipients for the purposes described:</p>
+      <ul>
+        <li><strong>Payment Processors:</strong> Stripe, including supported wallets like Apple Pay, Google Pay, Link, and Cash App Pay. We do not store full card numbers or CVCs.</li>
+        <li><strong>Logistics Partners:</strong> CLU for first‑mile logistics and handoff; USPS (primary), and other carriers or consolidators if needed.</li>
+        <li><strong>Security & Anti‑Abuse Services:</strong> human verification (e.g., CAPTCHA/Turnstile), bot detection, and fraud mitigation providers.</li>
+        <li><strong>Hosting & Infrastructure:</strong> cloud hosting and content delivery providers that help us run our websites and track systems.</li>
+        <li><strong>Communications:</strong> email and SMS service providers we use to send notices and respond to you.</li>
+        <li><strong>Business Transfers:</strong> in connection with a merger, acquisition, or sale of assets, subject to this Policy.</li>
+        <li><strong>Legal & Compliance:</strong> to comply with law, respond to lawful requests, or protect our rights, users, or the public.</li>
+      </ul>
+      <p class="note"><strong>No sale:</strong> We do not sell or trade personal information. We engage service providers under agreements that limit their use of PI to the services they provide for us.</p>
+
+      <h2 id="payments">8) Payments (Stripe, Wallets)</h2>
+      <p>Payments are processed by Stripe. Depending on your device, you may see options like card input, Apple Pay, Google Pay, Link, or Cash App Pay. When you pay, certain PI is exchanged with Stripe to create a charge and screen for fraud. <strong>Charmers does not receive full card numbers or CVCs.</strong> We do receive payment confirmations, tokens, and limited metadata (e.g., last4, brand, expiration month/year) to reconcile orders and provide support.</p>
+      <p>If you use wallet payments, we receive confirmation of success/failure and basic details needed to fulfill your order. When a payment fails, we receive error codes or messages sufficient to help you retry securely.</p>
+
+      <h2 id="cookies">9) Cookies & Similar Technologies</h2>
+      <p>We use cookies, localStorage, and similar technologies to keep you signed in, remember preferences, maintain your cart, and protect against fraud. You can control cookies in your browser. Blocking cookies may impact site functionality (e.g., checkout, tracking pages).</p>
+      <ul>
+        <li><strong>Strictly necessary:</strong> security tokens, session identifiers, cart persistence.</li>
+        <li><strong>Functional:</strong> preferences such as default shipping options.</li>
+        <li><strong>Performance:</strong> limited analytics to improve reliability and speed.</li>
+        <li><strong>Security/Verification:</strong> human verification and anti‑abuse tokens.</li>
+      </ul>
+
+      <h2 id="ads-analytics">10) Analytics, Fraud & Security</h2>
+      <p>We use minimal analytics and multiple security measures to help protect the integrity of our services. These systems may observe IP address, device characteristics, request rates, and interaction patterns to distinguish legitimate activity from automated or abusive behavior. Human verification challenges may be presented when needed. We also record limited logs to diagnose issues and prevent misuse.</p>
+
+      <h2 id="retention">11) Data Retention</h2>
+      <p>We retain PI for as long as necessary to provide services, comply with legal and accounting obligations, resolve disputes, and enforce agreements. Typical retention windows appear in <a href="#annex-a">Annex A</a>. We may retain de‑identified data for research and service improvement.</p>
+
+      <h2 id="security">12) Security</h2>
+      <p>We implement administrative, technical, and physical safeguards designed to protect PI. No method of transmission or storage is 100% secure. We continuously work to improve defenses and limit access to PI to personnel and service providers with a need to know.</p>
+
+      <h2 id="transfers">13) International Transfers</h2>
+      <p>We are U.S.‑based. If you access our services from outside the U.S., your information may be transferred to and processed in the United States or other jurisdictions with different data protection laws. Where required, we rely on appropriate safeguards for such transfers.</p>
+
+      <h2 id="your-rights">14) Your Privacy Rights</h2>
+      <p>Depending on where you live, you may have rights to access, correct, delete, or receive a copy of your PI; to withdraw consent; or to object to/limit certain processing. To exercise rights, contact us at <a href="mailto:support@charmersbiz.org">support@charmersbiz.org</a>. We may need to verify your identity. Authorized agents may submit requests where permitted by law.</p>
+
+      <h2 id="state-disclosures">15) U.S. State Disclosures (including CA/VA/CO/CT/UT/OR/TX)</h2>
+      <ul>
+        <li><strong>Categories of PI collected:</strong> See <a href="#annex-a">Annex A</a>.</li>
+        <li><strong>Purposes:</strong> See <a href="#uses">Section 5</a>.</li>
+        <li><strong>Sources:</strong> See <a href="#sources">Section 4</a>.</li>
+        <li><strong>Sharing &amp; disclosures:</strong> See <a href="#sharing">Section 7</a>.</li>
+        <li><strong>Sale/Share of PI:</strong> Charmers does <em>not</em> sell PI; we also do not “share” PI for cross‑context behavioral advertising as defined by California law.</li>
+        <li><strong>Sensitive PI:</strong> We do not use sensitive PI for inferring characteristics or for marketing.</li>
+        <li><strong>Non‑discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+        <li><strong>Opt‑out Signals:</strong> Where applicable, we endeavor to honor recognized opt‑out preference signals for targeted advertising (which we currently do not conduct).</li>
+      </ul>
+
+      <h2 id="children">16) Children’s Privacy</h2>
+      <p>Our storefront and logistics services are intended for a general audience and are not directed to children under 13. We do not knowingly collect personal information from children under 13 without verifiable parental consent. If you believe a child provided us PI without consent, contact us to request deletion.</p>
+
+      <h2 id="social">17) Social, UGC & Public Posts</h2>
+      <p>Information you choose to make public (e.g., product reviews, social media posts tagging our brands) may be visible to others. Please use caution when posting content that could reveal personal information.</p>
+
+      <h2 id="third-parties">18) Third‑Party Links & Sites</h2>
+      <p>Our services may link to third‑party sites we do not control. Their privacy practices are governed by their own policies. Review those policies before providing personal information.</p>
+
+      <h2 id="changes">19) Changes to This Policy</h2>
+      <p>We may update this Policy from time to time. The “Last updated” date at the top reflects the most recent changes. If changes materially affect your rights, we will provide additional notice as required by law.</p>
+
+      <h2 id="contact">20) How to Contact Us</h2>
+      <p>Questions or requests? Email <a href="mailto:support@charmersbiz.org">support@charmersbiz.org</a> or call <a href="tel:+19316230425">+1 (931) 623‑0425</a>. For faster handling, include “Privacy Request” in your subject line.</p>
+
+      <h2 id="annex-a">Annex A — Data Categories & Retention</h2>
+      <table>
+        <thead><tr><th>Category</th><th>Examples</th><th>Primary Purpose</th><th>Retention (typical)</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Identity &amp; Contact</td>
+            <td>Name, email, phone, shipping address</td>
+            <td>Order fulfillment, support</td>
+            <td>7 years for invoices/records; otherwise until account/order needs end</td>
+          </tr>
+          <tr>
+            <td>Order &amp; Customization</td>
+            <td>Bracelet text, size, style, gift messages</td>
+            <td>Make and deliver your order; support &amp; returns</td>
+            <td>Up to 3 years after fulfillment (unless legal hold)</td>
+          </tr>
+          <tr>
+            <td>Payment Metadata</td>
+            <td>Stripe payment IDs, last4, brand, status</td>
+            <td>Charge, refund, reconcile, fraud prevention</td>
+            <td>7 years (accounting/financial compliance)</td>
+          </tr>
+          <tr>
+            <td>Device &amp; Usage</td>
+            <td>IP, headers, pages viewed, session tokens</td>
+            <td>Security, functionality, analytics</td>
+            <td>90 days (logs); longer if required for security investigations</td>
+          </tr>
+          <tr>
+            <td>Logistics &amp; Tracking</td>
+            <td>CLU event scans, timestamps, carrier handoff</td>
+            <td>Track delivery, proof of fulfillment</td>
+            <td>2 years (typical), or to meet carrier/legal requirements</td>
+          </tr>
+          <tr>
+            <td>Support Communications</td>
+            <td>Email/SMS transcripts, call notes</td>
+            <td>Provide assistance; improve service</td>
+            <td>Up to 3 years; longer if needed for disputes</td>
+          </tr>
+          <tr>
+            <td>Employment/Contracting</td>
+            <td>Resumes, applications, eligibility info</td>
+            <td>Hiring and onboarding</td>
+            <td>Up to 3 years or per law</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="annex-b">Annex B — Cookie & Storage Catalog</h2>
+      <div class="small">Names may vary by environment. Examples below illustrate typical purposes.</div>
+      <table>
+        <thead><tr><th>Name</th><th>Type</th><th>Purpose</th><th>Expires</th></tr></thead>
+        <tbody>
+          <tr><td>_chm_session</td><td>Cookie</td><td>Session continuity, auth</td><td>Browser session</td></tr>
+          <tr><td>_chm_cart</td><td>localStorage</td><td>Cart contents &amp; preferences</td><td>Until cleared</td></tr>
+          <tr><td>_chm_turnstile</td><td>Cookie</td><td>Human verification token</td><td>30 minutes</td></tr>
+          <tr><td>_chm_pref_ship</td><td>localStorage</td><td>Preferred shipping/processing</td><td>Until cleared</td></tr>
+          <tr><td>_chm_secure_flag</td><td>Cookie</td><td>Fraud/abuse mitigation</td><td>Up to 7 days</td></tr>
+          <tr><td>_stripe_mid/_stripe_sid</td><td>Cookie</td><td>Stripe fraud prevention</td><td>Per Stripe policy</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="annex-c">Annex C — CLU Logistics & Tracking</h2>
+      <p><strong>What CLU Is:</strong> The Charmers Logistics Union handles first‑mile preparation, QC scans, and routing to national carriers. CLU tracking pages may show internal steps prior to USPS acceptance. Once handed off, USPS or the receiving carrier continues updates.</p>
+      <p><strong>Data Used:</strong> package ID, scan events, facility codes, timestamps, driver or station identifiers (as internal codes), and delivery confirmations. CLU uses this data to display status, troubleshoot delivery issues, and maintain operational metrics. CLU does not publish driver PII.</p>
+      <p><strong>When You Contact Support:</strong> We may view your tracking events and address details to assist you. We do not publicly expose your phone or email on tracking pages.</p>
+
+      <h2 id="annex-d">Annex D — Stripe Data Flow (Narrative)</h2>
+      <ol>
+        <li>You enter payment details on a Stripe Elements form or initiate a supported wallet.</li>
+        <li>Your device communicates directly with Stripe to tokenize payment info.</li>
+        <li>Charmers receives a token/intent ID from Stripe (not the full card number) and creates a charge.</li>
+        <li>Stripe screens the transaction for fraud and returns status to Charmers.</li>
+        <li>Charmers stores order details and Stripe IDs for reconciliation and support; card numbers/CVCs are not stored by Charmers.</li>
+      </ol>
+
+      <h2 id="glossary">Glossary</h2>
+      <p><strong>De‑identified data:</strong> Data that cannot reasonably be used to infer information about, or otherwise be linked to, a particular individual.</p>
+      <p><strong>Service Provider / Processor:</strong> A third party that processes PI on our behalf under contractual limits.</p>
+      <p><strong>Targeted advertising (cross‑context behavioral advertising):</strong> Ads based on your activity across non‑affiliated sites; Charmers does not engage in this.</p>
+
+      <p class="foot">© 2025 Charmers Business USA. All rights reserved.</p>
+    </section>
+  </main>
+</body>
+</html>
