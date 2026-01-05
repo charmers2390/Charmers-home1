@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charmers</title>
+<meta name="description" content="Charmers Business USA — custom and preset bracelets, logistics (CLU), community programs, careers, and more. Explore payments, FAQs, and policies.">
+<meta property="og:title" content="Charmers">
+<meta property="og:description" content="Custom bracelets with purpose. Learn about our products, logistics, programs, and careers.">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://charmersbiz.org/favicon.ico">
+<style>
+  :root{
+    --purple:#5f2c82;
+    --pink:#ff66c4;
+    --pink-2:#ff91da;
+    --ink:#222;
+    --muted:#666;
+    --bg:#faf8fc;
+    --card:#ffffff;
+    --border:#ebe5f4;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;font-family: "Poppins", Arial, sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  a{color:var(--purple);text-decoration:none}
+  a:hover{color:var(--pink)}
+  /* Header / Nav */
+  .topbar{position:sticky;top:0;z-index:1000;background:linear-gradient(135deg,var(--purple),#7e4aa2);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+  .nav{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+  .brand{font-weight:800;font-size:22px;letter-spacing:.5px}
+  .navlinks{display:flex;gap:18px;align-items:center}
+  .navlinks a{color:#fff;opacity:.95;font-weight:600}
+  .navlinks a:hover{opacity:1;color:#fff;text-decoration:underline}
+  .cta{background:var(--pink);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700}
+  .hamb{display:none;background:transparent;border:0;color:#fff;font-size:22px}
+  /* Hero */
+  .hero{background:linear-gradient(120deg, rgba(95,44,130,.12), rgba(255,102,196,.12));padding:56px 20px}
+  .container{max-width:1240px;margin:0 auto}
+  .hero h1{font-size:38px;margin:0 0 10px 0;color:var(--purple)}
+  .hero p{max-width:860px;font-size:18px;color:#333;margin:0}
+  .hero .actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--pink);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700}
+  .btn.secondary{background:#fff;color:var(--purple);border:2px solid var(--purple)}
+  /* Sections */
+  section{padding:56px 20px}
+  section h2{color:var(--purple);font-size:28px;margin:0 0 10px}
+  section .sub{color:var(--muted);margin:0 0 24px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+  .card h3{margin:0 0 8px;color:var(--purple)}
+  /* Two-column */
+  .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+  .pill{display:inline-block;background:rgba(95,44,130,.09);color:var(--purple);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px}
+  .notice{border-left:4px solid var(--pink);padding:12px 16px;background:#fff;border-radius:8px}
+  /* Lists */
+  ul.clean{padding-left:20px;margin:12px 0}
+  ul.clean li{margin:6px 0}
+  /* Footer */
+  footer{background:#1e1e1e;color:#e8e8e8}
+  footer .cols{grid-template-columns:repeat(4,1fr)}
+  footer a{color:#fff;opacity:.9}
+  footer a:hover{opacity:1;text-decoration:underline}
+  .copyright{border-top:1px solid #333;padding:16px 0;text-align:center;color:#cfcfcf;font-size:14px}
+  /* Responsive */
+  @media (max-width: 980px){
+    .grid{grid-template-columns:1fr 1fr}
+    .cols{grid-template-columns:1fr}
+    footer .cols{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 680px){
+    .navlinks{display:none}
+    .hamb{display:block}
+    .grid{grid-template-columns:1fr}
+    footer .cols{grid-template-columns:1fr}
+    .hero h1{font-size:30px}
+  }
+</style>
+<script>
+  // Simple mobile nav toggler
+  function toggleNav(){
+    const links = document.querySelector('.navlinks');
+    if(!links) return;
+    const isShown = links.style.display === 'flex';
+    links.style.display = isShown ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.background = 'rgba(0,0,0,.3)';
+    links.style.position = 'absolute';
+    links.style.top = '54px';
+    links.style.right = '12px';
+    links.style.padding = '12px';
+    links.style.borderRadius = '10px';
+  }
+</script>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="nav">
+      <div class="brand">Charmers</div>
+      <button class="hamb" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
+      <div class="navlinks" role="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="https://pay.charmersbiz.org">Payment</a>
+        <a href="https://faq.charmersbiz.org">FAQ</a>
+        <a href="https://donate.charmersbiz.org" class="cta">Donate</a>
+        <a href="https://hires.charmersbiz.org">Careers</a>
+        <a href="#contact">Contact</a>
+        <a href="#policies">Policies</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="pill">Official Business Website</span>
+      <h1>Custom Bracelets, Real Logistics, and Community Impact</h1>
+      <p>Charmers Business USA designs and delivers handmade bracelets with purpose and precision. We combine accessible pricing with transparent operations, a focus on customer care, and a logistics arm built to move quickly and responsibly.</p>
+      <div class="actions">
+        <a class="btn" href="https://pay.charmersbiz.org">Start an Order</a>
+        <a class="btn secondary" href="#about">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Operations -->
+  <section id="about">
+    <div class="container cols">
+      <div>
+        <h2>Who We Are</h2>
+        <p class="sub">Privately operated from Centerville, Tennessee, with fulfillment capacity that scales when demand spikes.</p>
+        <p>Founded in 2025, Charmers began with a simple promise: make meaningful accessories that people actually want to wear. We now operate structured functions across product design, production, logistics, customer support, and quality assurance. Our processes prioritize clarity, speed, and reliability, supported by documentation and ongoing staff training.</p>
+        <div class="notice">
+          <strong>Logistics note:</strong> Our internal <em>Charmers Logistics Union (CLU)</em> coordinates shipments and hand-offs. CLU primarily leverages USPS services with limited exceptions for specific local or employee deliveries.
+        </div>
+      </div>
+      <aside class="card">
+        <h3>Fast facts</h3>
+        <ul class="clean">
+          <li>Headquarters: Centerville, Tennessee</li>
+          <li>Primary products: Custom & preset bracelets</li>
+          <li>Support: support@charmersbiz.org</li>
+          <li>Policies: <a href="https://TOS.charmersbiz.org">TOS & Privacy</a></li>
+          <li>Careers: <a href="https://hires.charmersbiz.org">hires.charmersbiz.org</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <div class="container">
+      <h2>Products & Collections</h2>
+      <p class="sub">Two paths, same quality standard.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Custom Bracelets</h3>
+          <p>Choose your colors, size, and personalization text. Our system prices customization fairly based on the length and complexity of your request. Every custom build goes through inspection before packaging.</p>
+          <a class="btn" href="https://pay.charmersbiz.org">Customize & Order</a>
+        </div>
+        <div class="card">
+          <h3>Preset Bracelets</h3>
+          <p>Curated designs ready to ship. Preset series include Birthstone, Glow-in-the-Dark, and seasonal colorways. Inventory levels are monitored to keep delivery times short.</p>
+          <a class="btn secondary" href="https://charmersbiz.org">Browse Presets</a>
+        </div>
+        <div class="card">
+          <h3>Bulk & School Programs</h3>
+          <p>We support school spirit events and fundraisers with volume pricing and simple logistics coordination. Talk to our team about split shipments and on-campus delivery windows.</p>
+          <a class="btn secondary" href="#contact">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology & Security -->
+  <section id="technology">
+    <div class="container cols">
+      <div>
+        <h2>Technology & Security</h2>
+        <p class="sub">Payments through Stripe, with additional checks to protect customers and our staff.</p>
+        <p>Our checkout flows are designed around reliability and transparency. We support mainstream payment methods via Stripe, including card payments and compatible wallets where available. Sensitive card data is handled by Stripe; Charmers does not store card numbers on our servers. We log key order metadata—like contact information and shipping details—to help you track and receive your items.</p>
+        <p>Our public sites are hosted across reputable providers and protected with human verification on sensitive forms as needed. We continuously audit frontend logic for total calculation accuracy and display helpful error messages when payment attempts fail.</p>
+      </div>
+      <aside class="card">
+        <h3>Quick links</h3>
+        <ul class="clean">
+          <li><a href="https://pay.charmersbiz.org">Go to Payment</a></li>
+          <li><a href="https://faq.charmersbiz.org">FAQ</a></li>
+          <li><a href="https://donate.charmersbiz.org">Donate</a></li>
+          <li><a href="https://about.charmersbiz.org">About us</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CLU Logistics -->
+  <section id="logistics">
+    <div class="container">
+      <h2>Logistics: CLU</h2>
+      <p class="sub">Charmers Logistics Union orchestrates packing, labeling, and carrier hand‑offs.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Processing Windows</h3>
+          <p>Standard orders are processed quickly, with options to prioritize preparation during peak seasons. You'll receive confirmation once your order is packed and handed off.</p>
+        </div>
+        <div class="card">
+          <h3>Labeling & Tracking</h3>
+          <p>Labels include machine-readable barcodes and QR codes to accelerate sortation. You'll see major tracking milestones after carrier acceptance and while in transit.</p>
+        </div>
+        <div class="card">
+          <h3>Packaging Standards</h3>
+          <p>Padded mailers and reinforced envelopes are matched to bracelet size. We avoid unnecessary bulk to keep costs low while protecting your items in transit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Updates -->
+  <section id="news">
+    <div class="container">
+      <h2>News & Updates</h2>
+      <p class="sub">Latest developments and announcements from Charmers Business USA.</p>
+      <div class="card">
+        <h3>Latest News</h3>
+        <p><strong>Charmers partners with Montessori School of Franklin</strong> — Charmers has joined forces with the Montessori School of Franklin, Tennessee to launch <strong>Little Charmers™</strong>, a student-driven initiative designed to bring Charmers bracelets directly to students at discounted rates.</p>
+        <p><b>Note:</b> Purchases through Little Charmers™ are only available to students enrolled at the Montessori School of Franklin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community & Sustainability -->
+  <section id="community">
+    <div class="container cols">
+      <div>
+        <h2>Community Impact & Sustainability</h2>
+        <p class="sub">We operate locally and think long-term.</p>
+        <p>Charmers partners with schools and local organizations for events, fundraisers, and educational programs. We also try to make responsible material choices, favoring recyclable packaging and avoiding excessive plastic where possible. Our teams are trained to consolidate shipments and minimize waste throughout fulfillment.</p>
+      </div>
+      <aside class="card">
+        <h3>Get Involved</h3>
+        <ul class="clean">
+          <li>School & team programs</li>
+          <li>Community events</li>
+          <li>Donation drives</li>
+        </ul>
+        <a class="btn" href="https://donate.charmersbiz.org">Support Our Work</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Careers -->
+  <section id="careers">
+    <div class="container">
+      <h2>Careers at Charmers</h2>
+      <p class="sub">Join a hands-on business where your work ships daily.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Production & QA</h3>
+          <p>Assemble custom and preset bracelets, verify sizing, color sequence, and finish quality. Great for detail‑oriented builders.</p>
+        </div>
+        <div class="card">
+          <h3>Operations & CLU</h3>
+          <p>Coordinate order flow, pick/pack, and hand-offs. Track exceptions and ensure packaging meets our standards.</p>
+        </div>
+        <div class="card">
+          <h3>Support & Outreach</h3>
+          <p>Assist customers, manage program logistics for schools and partners, and keep communication flowing.</p>
+        </div>
+      </div>
+      <p style="margin-top:14px">Openings are posted at <a href="https://hires.charmersbiz.org">hires.charmersbiz.org</a>. Applications are reviewed on a rolling basis.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container cols">
+      <div>
+        <h2>Contact & Support</h2>
+        <p class="sub">We're here to help with orders, programs, and general questions.</p>
+        <p>Email our team at <a href="mailto:support@charmersbiz.org">support@charmersbiz.org</a>. Please include your order number (if applicable) and a brief description so we can route your message quickly.</p>
+        <p>For donations, visit <a href="https://donate.charmersbiz.org">donate.charmersbiz.org</a>. For product questions, see the <a href="https://faq.charmersbiz.org">FAQ</a>.</p>
+      </div>
+      <aside class="card">
+        <h3>Addresses & Links</h3>
+        <ul class="clean">
+          <li>Website: <a href="https://charmersbiz.org">charmersbiz.org</a></li>
+          <li>Payment: <a href="https://pay.charmersbiz.org">pay.charmersbiz.org</a></li>
+          <li>Careers: <a href="https://hires.charmersbiz.org">hires.charmersbiz.org</a></li>
+          <li>Policies: <a href="https://TOS.charmersbiz.org">TOS & Privacy</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Policies / Legal -->
+  <section id="policies">
+    <div class="container">
+      <h2>Policies & Notices</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Terms of Service</h3>
+          <p>Our Terms outline order processing, payment methods, acceptable use, and dispute resolution. We aim to keep our policies readable and updated as our operations evolve.</p>
+          <a class="btn secondary" href="https://TOS.charmersbiz.org">View Terms</a>
+        </div>
+        <div class="card">
+          <h3>Privacy</h3>
+          <p>We collect only the information needed to fulfill orders and provide support. Card details are handled by Stripe. We do not sell or trade personal data.</p>
+          <a class="btn secondary" href="https://TOS.charmersbiz.org">Read Privacy Policy</a>
+        </div>
+        <div class="card">
+          <h3>Accessibility</h3>
+          <p>We're working toward WCAG‑aligned experiences. If you encounter issues using our site or forms, contact support so we can assist and improve.</p>
+          <a class="btn secondary" href="#contact">Request Assistance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <section class="container cols" style="padding-top:34px;padding-bottom:10px">
+      <div>
+        <h3>Charmers</h3>
+        <p>Handmade bracelets, thoughtful logistics, and community programs from Centerville, Tennessee.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="clean">
+          <li><a href="#products">Products</a></li>
+          <li><a href="https://about.charmersbiz.org">About</a></li>
+          <li><a href="https://faq.charmersbiz.org">FAQ</a></li>
+          <li><a href="https://donate.charmersbiz.org">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Do business</h3>
+        <ul class="clean">
+          <li><a href="https://pay.charmersbiz.org">Payment</a></li>
+          <li><a href="https://hires.charmersbiz.org">Careers</a></li>
+          <li><a href="#policies">Policies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul class="clean">
+          <li><a href="https://TOS.charmersbiz.org">Terms of Service</a></li>
+          <li><a href="https://TOS.charmersbiz.org">Privacy Policy</a></li>
+          <li><a href="#policies">Accessibility</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="copyright">
+      © 2025 Charmers Business USA. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
