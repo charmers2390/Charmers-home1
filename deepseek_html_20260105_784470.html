@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charmers</title>
+<meta name="description" content="Charmers Business USA — custom bracelets starting at $5, logistics, community programs, and login for your account.">
+<meta property="og:title" content="Charmers">
+<meta property="og:description" content="Affordable custom bracelets with purpose. Starting at $5. Log in to manage your orders.">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://charmersbiz.org/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Identity Services -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+  /* ============================================
+     ORIGINAL CHARMERS CSS (COMPLETE)
+  ============================================ */
+  :root {
+    --purple: #5f2c82;
+    --pink: #ff66c4;
+    --pink-2: #ff91da;
+    --ink: #222;
+    --muted: #666;
+    --bg: #faf8fc;
+    --card: #ffffff;
+    --border: #ebe5f4;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    color: var(--purple);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--pink);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /* Header / Navigation */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--purple), #7e4aa2);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  }
+  
+  .nav {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+  
+  .brand {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: .5px;
+  }
+  
+  .navlinks {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  
+  .navlinks a {
+    color: #fff;
+    opacity: .95;
+    font-weight: 600;
+  }
+  
+  .navlinks a:hover {
+    opacity: 1;
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .cta {
+    background: var(--pink);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+  
+  .hamb {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(120deg, rgba(95,44,130,.15), rgba(255,102,196,.15));
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 42px;
+    margin: 0 0 15px 0;
+    color: var(--purple);
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    max-width: 860px;
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 25px 0;
+  }
+  
+  .hero .highlight {
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
+  
+  .hero .actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background: var(--pink);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 102, 196, 0.4);
+  }
+  
+  .btn.secondary {
+    background: #fff;
+    color: var(--purple);
+    border: 2px solid var(--purple);
+  }
+  
+  .btn.secondary:hover {
+    background: var(--purple);
+    color: #fff;
+  }
+  
+  .btn.large {
+    padding: 18px 28px;
+    font-size: 18px;
+  }
+  
+  /* Sections */
+  section {
+    padding: 80px 20px;
+  }
+  
+  section h2 {
+    color: var(--purple);
+    font-size: 32px;
+    margin: 0 0 15px;
+    text-align: center;
+  }
+  
+  section .sub {
+    color: var(--muted);
+    margin: 0 auto 40px;
+    text-align: center;
+    max-width: 700px;
+    font-size: 18px;
+  }
+  
+  /* Grid Layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+  }
+  
+  .card h3 {
+    margin: 0 0 12px;
+    color: var(--purple);
+    font-size: 22px;
+  }
+  
+  /* Two-column Layout */
+  .cols {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 30px;
+  }
+  
+  .pill {
+    display: inline-block;
+    background: rgba(95,44,130,.12);
+    color: var(--purple);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    margin-bottom: 20px;
+  }
+  
+  .notice {
+    border-left: 5px solid var(--pink);
+    padding: 18px 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  }
+  
+  /* Lists */
+  ul.clean {
+    padding-left: 22px;
+    margin: 15px 0;
+  }
+  
+  ul.clean li {
+    margin: 8px 0;
+    line-height: 1.6;
+  }
+  
+  /* Product Cards */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+  }
+  
+  .product-image {
+    height: 220px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-image.heart-bracelet {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .product-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-price {
+    color: var(--purple);
+    font-size: 24px;
+    font-weight: 800;
+    margin: 15px 0;
+  }
+  
+  .product-price .starting {
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  
+  /* Forms */
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 16px;
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    outline: none;
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(95, 44, 130, 0.15);
+  }
+  
+  .form-textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+  
+  /* Quick Links Section */
+  .quick-links {
+    background: linear-gradient(135deg, rgba(95,44,130,.05), rgba(255,102,196,.05));
+    padding: 60px 20px;
+    margin: 40px 0;
+  }
+  
+  .quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+  .quick-link-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+  }
+  
+  .quick-link-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Footer */
+  footer {
+    background: #1a1a1a;
+    color: #e8e8e8;
+  }
+  
+  footer .cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  footer a {
+    color: #fff;
+    opacity: .9;
+  }
+  
+  footer a:hover {
+    opacity: 1;
+    color: var(--pink);
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    border-top: 1px solid #333;
+    padding: 25px 0;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1100px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    footer .cols {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navlinks {
+      display: none;
+      position: absolute;
+      top: 54px;
+      right: 12px;
+      background: rgba(0,0,0,.95);
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 12px;
+      z-index: 1001;
+      width: 250px;
+    }
+    
+    .navlinks.active {
+      display: flex;
+    }
+    
+    .hamb {
+      display: block;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cols {
+      grid-template-columns: 1fr;
+    }
+    
+    footer .cols {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+      font-size: 32px;
+    }
+    
+    .hero p {
+      font-size: 18px;
+    }
+    
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    section {
+      padding: 60px 20px;
+    }
+    
+    .quick-links-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 28px;
+    }
+    
+    section h2 {
+      font-size: 26px;
+    }
+    
+    .btn {
+      padding: 12px 18px;
+      font-size: 15px;
+    }
+  }
+
+  /* ============================================
+     NEW LOGIN SYSTEM CSS
+  ============================================ */
+  
+  /* Login Modal */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+    padding: 20px;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .login-modal {
+    background: var(--card);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    position: relative;
+    animation: slideUp 0.4s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--muted);
+    cursor: pointer;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .modal-close:hover {
+    color: var(--purple);
+    background: rgba(95, 44, 130, 0.1);
+  }
+  
+  .login-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 30px;
+  }
+  
+  .login-tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .login-tab.active {
+    color: var(--purple);
+  }
+  
+  .login-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--purple);
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .login-form {
+    display: none;
+  }
+  
+  .login-form.active {
+    display: block;
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 22px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(95, 44, 130, 0.15);
+    background: white;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 17px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .login-btn:hover {
+    background: #4a1e6b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(95, 44, 130, 0.3);
+  }
+  
+  .login-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  .login-btn.google {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .login-btn.google:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  
+  .divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+  }
+  
+  .divider span {
+    background: var(--card);
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .form-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  
+  .form-footer a {
+    color: var(--purple);
+    font-weight: 600;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-error {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+    color: var(--error);
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: none;
+    border-left: 4px solid var(--error);
+    font-size: 15px;
+  }
+  
+  .login-error.active {
+    display: block;
+    animation: shake 0.5s ease;
+  }
+  
+  .login-success {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+    color: var(--success);
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: none;
+    border-left: 4px solid var(--success);
+    font-size: 15px;
+  }
+  
+  .login-success.active {
+    display: block;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }
+  
+  /* Remember Me Checkbox */
+  .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--purple);
+  }
+  
+  /* User Menu in Navigation */
+  .user-menu-container {
+    position: relative;
+  }
+  
+  #loggedInUser {
+    display: none;
+  }
+  
+  .user-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .user-avatar:hover {
+    transform: scale(1.1);
+    border-color: white;
+  }
+  
+  .user-dropdown {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    min-width: 260px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    z-index: 100;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  
+  .user-dropdown.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .user-info {
+    padding: 25px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, rgba(95,44,130,0.05), rgba(255,102,196,0.05));
+  }
+  
+  .user-name {
+    font-weight: 800;
+    color: var(--ink);
+    font-size: 18px;
+  }
+  
+  .user-email {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 5px;
+    word-break: break-all;
+  }
+  
+  .dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 25px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: all 0.2s;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .dropdown-link:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-link:hover {
+    background: rgba(95, 44, 130, 0.05);
+    color: var(--purple);
+    padding-left: 30px;
+  }
+  
+  .dropdown-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .dropdown-link.logout {
+    color: var(--error);
+    background: rgba(239, 68, 68, 0.05);
+  }
+  
+  .dropdown-link.logout:hover {
+    background: rgba(239, 68, 68, 0.1);
+  }
+  
+  /* Social Sharing for Logged In Users */
+  .social-sharing {
+    display: none;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .social-sharing.active {
+    display: block;
+  }
+  
+  .social-sharing h4 {
+    color: var(--purple);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .social-share-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .social-share-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .social-share-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  .share-facebook { background: #1877f2; }
+  .share-twitter { background: #1da1f2; }
+  .share-pinterest { background: #e60023; }
+  .share-whatsapp { background: #25d366; }
+  
+  /* Google Button Container */
+  .g_id_signin {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+  
+  /* Login Note in FAQ */
+  .faq-login-note {
+    background: linear-gradient(135deg, rgba(95,44,130,0.08), rgba(255,102,196,0.08));
+    border-left: 4px solid var(--purple);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 40px 0;
+  }
+  
+  .faq-login-note h4 {
+    color: var(--purple);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+</style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="nav">
+      <div class="brand">Charmers</div>
+      <button class="hamb" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
+      <div class="navlinks" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#careers">Careers</a>
+        <a href="#policies">Policies</a>
+        <a href="#quicklinks">Quick Links</a>
+        <a href="#contact">Contact</a>
+        
+        <!-- Login / User Menu -->
+        <div class="user-menu-container">
+          <!-- Login Button (shown when logged out) -->
+          <a href="#" class="cta" id="loginButtonNav" onclick="showLoginModal(); return false;">
+            <i class="fas fa-sign-in-alt" style="margin-right: 8px;"></i> Login
+          </a>
+          
+          <!-- User Menu (shown when logged in) -->
+          <div id="loggedInUser">
+            <div class="user-avatar" id="userAvatar" onclick="toggleUserDropdown()">
+              U
+            </div>
+            <div class="user-dropdown" id="userDropdown">
+              <div class="user-info">
+                <div class="user-name" id="dropdownUserName">User Name</div>
+                <div class="user-email" id="dropdownUserEmail">user@example.com</div>
+              </div>
+              <a href="#" class="dropdown-link" onclick="showSection('products'); hideUserDropdown();">
+                <i class="fas fa-shopping-bag"></i> My Orders
+              </a>
+              <a href="#" class="dropdown-link" onclick="showSection('products'); hideUserDropdown();">
+                <i class="fas fa-heart"></i> Wishlist
+              </a>
+              <a href="#" class="dropdown-link" onclick="showSection('products'); hideUserDropdown();">
+                <i class="fas fa-cog"></i> Account Settings
+              </a>
+              <a href="#" class="dropdown-link" onclick="shareOnFacebook(); hideUserDropdown();">
+                <i class="fab fa-facebook"></i> Share on Facebook
+              </a>
+              <a href="#" class="dropdown-link" onclick="shareOnTwitter(); hideUserDropdown();">
+                <i class="fab fa-twitter"></i> Share on Twitter
+              </a>
+              <a href="#" class="dropdown-link logout" onclick="logout(); hideUserDropdown();">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="login-modal">
+      <button class="modal-close" onclick="hideLoginModal()">&times;</button>
+      <h2 style="color: var(--purple); margin-bottom: 10px; text-align: center;">Welcome to Charmers</h2>
+      <p style="text-align: center; color: var(--muted); margin-bottom: 30px;">Login to track orders and save designs</p>
+      
+      <div class="login-tabs">
+        <button class="login-tab active" onclick="switchLoginTab('login')">Login</button>
+        <button class="login-tab" onclick="switchLoginTab('register')">Register</button>
+      </div>
+      
+      <!-- Error/Success Messages -->
+      <div class="login-error" id="loginError"></div>
+      <div class="login-success" id="loginSuccess"></div>
+      
+      <!-- Login Form -->
+      <form class="login-form active" id="loginForm" onsubmit="handleEmailLogin(event); return false;">
+        <div class="form-group">
+          <input type="email" id="loginEmail" class="login-input" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" class="login-input" placeholder="Password" required>
+        </div>
+        
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe" style="color: var(--ink); font-size: 15px;">Remember me</label>
+        </div>
+        
+        <button type="submit" class="login-btn" id="loginSubmitBtn">
+          <i class="fas fa-sign-in-alt"></i> Sign In
+        </button>
+        
+        <div class="form-footer">
+          <a href="#" onclick="showForgotPassword(); return false;">Forgot your password?</a>
+        </div>
+      </form>
+      
+      <!-- Register Form -->
+      <form class="login-form" id="registerForm" onsubmit="handleEmailRegister(event); return false;">
+        <div class="form-group">
+          <input type="text" id="registerName" class="login-input" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="registerEmail" class="login-input" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="registerPassword" class="login-input" placeholder="Password (min. 6 characters)" required minlength="6">
+        </div>
+        <div class="form-group">
+          <input type="password" id="registerConfirmPassword" class="login-input" placeholder="Confirm Password" required>
+        </div>
+        
+        <button type="submit" class="login-btn" id="registerSubmitBtn">
+          <i class="fas fa-user-plus"></i> Create Account
+        </button>
+        
+        <div class="form-footer">
+          By registering, you agree to our <a href="#" onclick="showSection('policies'); hideLoginModal(); return false;">Terms & Privacy</a>
+        </div>
+      </form>
+      
+      <div class="divider">
+        <span>Or continue with</span>
+      </div>
+      
+      <!-- Google Sign-In Button -->
+      <div id="googleLoginButtonContainer" style="margin-top: 10px;">
+        <div id="g_id_onload"
+             data-client_id="546323677786-f89ucbod4aphp3gmfqc6t1cavm9or8cn.apps.googleusercontent.com"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-callback="handleGoogleLogin"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="rectangular"
+             data-theme="outline"
+             data-text="signin_with"
+             data-size="large"
+             data-logo_alignment="left">
+        </div>
+      </div>
+      
+      <div class="form-footer" style="margin-top: 30px;">
+        Need help? <a href="#" onclick="showSection('contact'); hideLoginModal(); return false;">Contact Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="content">
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <span class="pill">Official Business Website</span>
+        <h1>Custom Bracelets Starting at <span class="highlight">Just $5</span></h1>
+        <p>Charmers Business USA designs and delivers handmade bracelets with purpose and precision. We combine <strong>accessible pricing</strong> with transparent operations, a focus on customer care, and a logistics arm built to move quickly and responsibly.</p>
+        <p>Founded in Centerville, Tennessee, we've grown from a small startup to a reliable provider of quality custom accessories. Every bracelet tells a story, and we're here to help you tell yours without breaking the bank.</p>
+        <div class="actions">
+          <button class="btn large" onclick="showSection('products')">Shop Bracelets from $5</button>
+          <button class="btn secondary large" onclick="showLoginModal()">Login / Register</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="hidden">
+      <div class="container">
+        <h2>Affordable Quality Bracelets</h2>
+        <p class="sub">Every bracelet is handcrafted with care, starting at just $5. Perfect for gifts, personal style, or special occasions.</p>
+        
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-image">
+              Image Coming Soon
+            </div>
+            <div class="product-content">
+              <h3>Charmers Birthstone Series</h3>
+              <p>Celebrate life's special moments with our Birthstone Series. Each bracelet features genuine birthstones corresponding to each month, set in elegant sterling silver or gold-plated settings.</p>
+              <div class="product-price"><span class="starting">Starting at</span> $5.99</div>
+              <button class="btn" onclick="showProduct('birthstone')">Buy Now</button>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-image heart-bracelet">
+              Charmers Heart Bracelet
+            </div>
+            <div class="product-content">
+              <h3>Charmers Heart Bracelet</h3>
+              <p>Express your love and compassion with our signature Heart Bracelet. Featuring a delicate heart charm adorned with sparkling cubic zirconia, this bracelet symbolizes connection and affection.</p>
+              <div class="product-price"><span class="starting">Starting at</span> $5.49</div>
+              <button class="btn" onclick="showProduct('heart')">Buy Now</button>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-image">
+              Image Coming Soon
+            </div>
+            <div class="product-content">
+              <h3>Charmers Custom Bracelet</h3>
+              <p>Create your unique masterpiece with our fully customizable bracelet builder. Choose from various chain styles, charms, gemstones, and engravings to design a bracelet that tells your personal story.</p>
+              <div class="product-price"><span class="starting">Starting at</span> $5.00</div>
+              <button class="btn" onclick="showProduct('custom')">Design Yours</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="hidden">
+      <div class="container">
+        <h2>About Charmers</h2>
+        <p class="sub">More than just bracelets - we're building connections and communities</p>
+        
+        <div class="notice">
+          <strong>New Feature:</strong> We now have a secure customer login system! <a href="#" onclick="showLoginModal(); return false;">Login or register</a> to track your orders, save your favorite designs, and access exclusive member offers.
+        </div>
+        
+        <div class="cols" style="margin-top: 40px;">
+          <div>
+            <h3>Our Story</h3>
+            <p>Founded in 2025 in Centerville, Tennessee, Charmers began with a simple mission: create beautiful, affordable accessories that everyone can enjoy. What started as a small home-based operation has grown into a fully-fledged business with nationwide reach.</p>
+            
+            <p>We believe that quality shouldn't come with a high price tag. That's why we've perfected our production process to deliver handcrafted bracelets starting at just $5, without compromising on materials or craftsmanship.</p>
+            
+            <h3 style="margin-top: 30px;">Our Values</h3>
+            <div class="grid" style="margin-top: 20px;">
+              <div class="card">
+                <h4>Affordability</h4>
+                <p>Quality products starting at $5. No hidden fees, no surprises.</p>
+              </div>
+              <div class="card">
+                <h4>Transparency</h4>
+                <p>Clear pricing, honest timelines, and open communication.</p>
+              </div>
+              <div class="card">
+                <h4>Community</h4>
+                <p>Supporting local initiatives and responsible sourcing practices.</p>
+              </div>
+            </div>
+          </div>
+          
+          <aside class="card">
+            <h3>Company Facts</h3>
+            <ul class="clean">
+              <li><strong>Founded:</strong> 2025</li>
+              <li><strong>Headquarters:</strong> Centerville, Tennessee</li>
+              <li><strong>Products Sold:</strong> 10,000+</li>
+              <li><strong>Starting Price:</strong> $5.00</li>
+              <li><strong>Customer Satisfaction:</strong> 98%</li>
+              <li><strong>Shipping Areas:</strong> All 50 US States</li>
+              <li><strong>Team Size:</strong> 15+ Employees</li>
+              <li><strong>Production Time:</strong> 3-5 Business Days</li>
+            </ul>
+            
+            <div class="social-sharing" id="aboutSocialSharing">
+              <h4>Share Charmers</h4>
+              <div class="social-share-buttons">
+                <div class="social-share-btn share-facebook" onclick="shareOnFacebook()">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-share-btn share-twitter" onclick="shareOnTwitter()">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="social-share-btn share-pinterest" onclick="shareOnPinterest()">
+                  <i class="fab fa-pinterest-p"></i>
+                </div>
+                <div class="social-share-btn share-whatsapp" onclick="shareOnWhatsApp()">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="hidden">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="sub">Everything you need to know about Charmers products and services</p>
+        
+        <!-- Login Note -->
+        <div class="faq-login-note">
+          <h4><i class="fas fa-user-circle"></i> Account & Login</h4>
+          <p>We now offer customer accounts! <strong>Login or register</strong> to track your orders, save your designs, and access exclusive member offers. Your account syncs across all devices.</p>
+          <button class="btn" style="margin-top: 15px;" onclick="showLoginModal()">
+            <i class="fas fa-sign-in-alt"></i> Go to Login
+          </button>
+        </div>
+        
+        <div class="faq-container">
+          <!-- FAQ items would go here -->
+          <div class="card">
+            <h3>Common Questions</h3>
+            <p>Your FAQ content here...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other sections (careers, policies, quicklinks, contact) would follow here -->
+    
+    <!-- Quick Links Section -->
+    <section id="quicklinks" class="quick-links hidden">
+      <div class="container">
+        <h2>Quick Links</h2>
+        <p class="sub">Everything you need, right at your fingertips</p>
+        
+        <div class="quick-links-grid">
+          <div class="quick-link-card">
+            <div class="quick-link-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3>Shop Now</h3>
+            <p>Browse our collection of affordable bracelets starting at $5</p>
+            <button class="btn" onclick="showSection('products')" style="margin-top: 15px;">View Products</button>
+          </div>
+          
+          <div class="quick-link-card">
+            <div class="quick-link-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>My Account</h3>
+            <p>Login to track orders, save designs, and manage your account</p>
+            <button class="btn" onclick="showLoginModal()" style="margin-top: 15px;">Login / Register</button>
+          </div>
+          
+          <div class="quick-link-card">
+            <div class="quick-link-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>FAQ & Help</h3>
+            <p>Find answers to common questions about our products and services</p>
+            <button class="btn" onclick="showSection('faq')" style="margin-top: 15px;">View FAQ</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="hidden">
+      <div class="container cols">
+        <div>
+          <h2>Contact & Support</h2>
+          <p class="sub">We're here to help with orders, programs, and general questions</p>
+          <p>Email our team at <a href="mailto:support@charmersbiz.org">support@charmersbiz.org</a>. Please include your order number (if applicable) and a brief description so we can route your message quickly.</p>
+          
+          <div class="notice" style="margin-top: 20px;">
+            <strong>Account Support:</strong> Having issues with login or your account? Contact us at <a href="mailto:accounts@charmersbiz.org">accounts@charmersbiz.org</a> for dedicated account support.
+          </div>
+        </div>
+        
+        <aside class="card">
+          <h3>Quick Links</h3>
+          <ul class="clean">
+            <li><a href="#" onclick="showLoginModal()">Login / Register</a></li>
+            <li><a href="#" onclick="showSection('faq')">FAQ</a></li>
+            <li><a href="#" onclick="showSection('policies')">Policies</a></li>
+            <li><a href="https://donate.charmersbiz.org">Donate</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <section class="container cols" style="padding-top: 40px; padding-bottom: 20px">
+      <div>
+        <h3>Charmers</h3>
+        <p>Handmade bracelets, thoughtful logistics, and community programs from Centerville, Tennessee.</p>
+        <button class="btn" style="margin-top: 15px; padding: 10px 20px;" onclick="showLoginModal()">
+          <i class="fas fa-user"></i> Member Login
+        </button>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul class="clean">
+          <li><a href="#" onclick="showSection('products')">All Products</a></li>
+          <li><a href="#" onclick="showProduct('birthstone')">Birthstone Series</a></li>
+          <li><a href="#" onclick="showProduct('heart')">Heart Bracelets</a></li>
+          <li><a href="#" onclick="showProduct('custom')">Custom Designs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul class="clean">
+          <li><a href="#" onclick="showSection('about')">About Us</a></li>
+          <li><a href="#" onclick="showSection('careers')">Careers</a></li>
+          <li><a href="#" onclick="showSection('policies')">Policies</a></li>
+          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <ul class="clean">
+          <li><a href="#" onclick="showSection('faq')">FAQ</a></li>
+          <li><a href="#" onclick="showSection('quicklinks')">Quick Links</a></li>
+          <li><a href="https://donate.charmersbiz.org">Donate</a></li>
+          <li><a href="https://pay.charmersbiz.org">Payment Portal</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <div class="copyright">
+      © 2025-2026 Charmers Business USA. All rights reserved.<br>
+      <span style="font-size: 13px; margin-top: 10px; display: block;">Centerville, Tennessee | support@charmersbiz.org</span>
+    </div>
+  </footer>
+
+<script>
+// ============================================
+// BACKEND CONFIGURATION
+// ============================================
+const BACKEND_URL = 'https://charmerscloud-546323677786.europe-west1.run.app';
+const GOOGLE_CLIENT_ID = '546323677786-f89ucbod4aphp3gmfqc6t1cavm9or8cn.apps.googleusercontent.com';
+
+// ============================================
+// AUTH STATE MANAGEMENT
+// ============================================
+let currentUser = null;
+let rememberMe = localStorage.getItem('charmers_remember_me') === 'true';
+
+function checkAuthState() {
+  const userData = localStorage.getItem('charmers_user');
+  const accessToken = localStorage.getItem('charmers_access_token');
+  
+  if (userData && accessToken) {
+    try {
+      currentUser = JSON.parse(userData);
+      updateUIForLoggedInUser(currentUser);
+      
+      // Show social sharing for logged in users
+      document.querySelectorAll('.social-sharing').forEach(el => {
+        el.classList.add('active');
+      });
+    } catch (e) {
+      console.error('Failed to parse user data:', e);
+      logout();
+    }
+  } else {
+    updateUIForLoggedOutUser();
+  }
+}
+
+function updateUIForLoggedInUser(user) {
+  // Update navigation
+  document.getElementById('loginButtonNav').style.display = 'none';
+  document.getElementById('loggedInUser').style.display = 'block';
+  
+  // Set user avatar (first letter of name)
+  const firstLetter = user.name ? user.name.charAt(0).toUpperCase() : 'U';
+  document.getElementById('userAvatar').textContent = firstLetter;
+  
+  // Set dropdown info
+  document.getElementById('dropdownUserName').textContent = user.name;
+  document.getElementById('dropdownUserEmail').textContent = user.email;
+  
+  // Update social sharing visibility
+  document.querySelectorAll('.social-sharing').forEach(el => {
+    el.classList.add('active');
+  });
+}
+
+function updateUIForLoggedOutUser() {
+  document.getElementById('loginButtonNav').style.display = 'block';
+  document.getElementById('loggedInUser').style.display = 'none';
+  currentUser = null;
+  
+  // Hide social sharing
+  document.querySelectorAll('.social-sharing').forEach(el => {
+    el.classList.remove('active');
+  });
+}
+
+// ============================================
+// LOGIN MODAL FUNCTIONS
+// ============================================
+function showLoginModal() {
+  document.getElementById('loginModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  // Clear any previous messages
+  clearLoginMessages();
+  
+  // Check if remember me was checked
+  const rememberMeChecked = localStorage.getItem('charmers_remember_me') === 'true';
+  const savedEmail = localStorage.getItem('charmers_saved_email');
+  
+  if (rememberMeChecked && savedEmail) {
+    document.getElementById('loginEmail').value = savedEmail;
+    document.getElementById('rememberMe').checked = true;
+  }
+}
+
+function hideLoginModal() {
+  document.getElementById('loginModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+  clearLoginMessages();
+  clearLoginForms();
+}
+
+function clearLoginMessages() {
+  document.getElementById('loginError').classList.remove('active');
+  document.getElementById('loginSuccess').classList.remove('active');
+  document.getElementById('loginError').textContent = '';
+  document.getElementById('loginSuccess').textContent = '';
+}
+
+function clearLoginForms() {
+  document.getElementById('loginForm').reset();
+  document.getElementById('registerForm').reset();
+  document.getElementById('rememberMe').checked = false;
+}
+
+function switchLoginTab(tabName) {
+  // Update tabs
+  document.querySelectorAll('.login-tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  // Update forms
+  document.querySelectorAll('.login-form').forEach(form => {
+    form.classList.remove('active');
+  });
+  
+  if (tabName === 'login') {
+    document.getElementById('loginForm').classList.add('active');
+  } else {
+    document.getElementById('registerForm').classList.add('active');
+  }
+  
+  clearLoginMessages();
+}
+
+// ============================================
+// EMAIL/PASSWORD AUTH
+// ============================================
+async function handleEmailLogin(event) {
+  event.preventDefault();
+  
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  const remember = document.getElementById('rememberMe').checked;
+  const submitBtn = document.getElementById('loginSubmitBtn');
+  
+  // Basic validation
+  if (!email || !password) {
+    showLoginError('Please enter both email and password.');
+    return;
+  }
+  
+  // Save remember me preference
+  localStorage.setItem('charmers_remember_me', remember);
+  if (remember) {
+    localStorage.setItem('charmers_saved_email', email);
+  } else {
+    localStorage.removeItem('charmers_saved_email');
+  }
+  
+  // Show loading state
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
+  submitBtn.disabled = true;
+  
+  try {
+    const response = await fetch(`${BACKEND_URL}/api/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    
+    const data = await response.json();
+    
+    if (data.success) {
+      // Store user data and tokens
+      localStorage.setItem('charmers_user', JSON.stringify(data.user));
+      localStorage.setItem('charmers_access_token', data.tokens.accessToken);
+      localStorage.setItem('charmers_refresh_token', data.tokens.refreshToken);
+      
+      // Update UI
+      currentUser = data.user;
+      updateUIForLoggedInUser(data.user);
+      
+      // Show success
+      showLoginSuccess('Login successful! Welcome back.');
+      
+      // Close modal after delay
+      setTimeout(() => {
+        hideLoginModal();
+        
+        // Redirect based on current section
+        const currentSection = window.location.hash.substring(1) || 'home';
+        if (currentSection === 'products') {
+          // Could show a welcome modal with special offer
+          setTimeout(() => {
+            alert(`Welcome ${data.user.name}! As a logged-in member, you get priority support.`);
+          }, 500);
+        }
+      }, 1500);
+      
+    } else {
+      throw new Error(data.message || 'Login failed');
+    }
+    
+  } catch (error) {
+    showLoginError(error.message || 'Invalid email or password. Please try again.');
+  } finally {
+    // Reset button
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+  }
+}
+
+async function handleEmailRegister(event) {
+  event.preventDefault();
+  
+  const name = document.getElementById('registerName').value.trim();
+  const email = document.getElementById('registerEmail').value.trim();
+  const password = document.getElementById('registerPassword').value;
+  const confirmPassword = document.getElementById('registerConfirmPassword').value;
+  const submitBtn = document.getElementById('registerSubmitBtn');
+  
+  // Basic validation
+  if (!name || !email || !password || !confirmPassword) {
+    showLoginError('Please fill in all fields.');
+    return;
+  }
+  
+  if (password !== confirmPassword) {
+    showLoginError('Passwords do not match.');
+    return;
+  }
+  
+  if (password.length < 6) {
+    showLoginError('Password must be at least 6 characters.');
+    return;
+  }
+  
+  if (!validateEmail(email)) {
+    showLoginError('Please enter a valid email address.');
+    return;
+  }
+  
+  // Show loading state
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+  submitBtn.disabled = true;
+  
+  try {
+    const response = await fetch(`${BACKEND_URL}/api/auth/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, name })
+    });
+    
+    const data = await response.json();
+    
+    if (data.success) {
+      // Store user data and tokens
+      localStorage.setItem('charmers_user', JSON.stringify(data.user));
+      localStorage.setItem('charmers_access_token', data.tokens.accessToken);
+      localStorage.setItem('charmers_refresh_token', data.tokens.refreshToken);
+      
+      // Update UI
+      currentUser = data.user;
+      updateUIForLoggedInUser(data.user);
+      
+      // Show success
+      showLoginSuccess('Account created successfully! Welcome to Charmers.');
+      
+      // Switch to login tab (for next time)
+      document.querySelector('.login-tab.active').classList.remove('active');
+      document.querySelector('.login-tab').classList.add('active');
+      document.getElementById('loginForm').classList.add('active');
+      document.getElementById('registerForm').classList.remove('active');
+      
+      // Pre-fill login email for next time
+      document.getElementById('loginEmail').value = email;
+      
+      // Close modal after delay
+      setTimeout(() => {
+        hideLoginModal();
+        alert(`Welcome to Charmers, ${name}! Check your email for a welcome message.`);
+      }, 2000);
+      
+    } else {
+      throw new Error(data.message || 'Registration failed');
+    }
+    
+  } catch (error) {
+    showLoginError(error.message || 'Could not create account. Please try again.');
+  } finally {
+    // Reset button
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+  }
+}
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+// ============================================
+// GOOGLE LOGIN
+// ============================================
+async function handleGoogleLogin(response) {
+  const token = response.credential;
+  
+  try {
+    const authResponse = await fetch(`${BACKEND_URL}/api/auth/google`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token })
+    });
+    
+    const data = await authResponse.json();
+    
+    if (data.success) {
+      // Store user data and tokens
+      localStorage.setItem('charmers_user', JSON.stringify(data.user));
+      localStorage.setItem('charmers_access_token', data.tokens.accessToken);
+      localStorage.setItem('charmers_refresh_token', data.tokens.refreshToken);
+      
+      // Update UI
+      currentUser = data.user;
+      updateUIForLoggedInUser(data.user);
+      
+      // Show success and close modal
+      hideLoginModal();
+      
+      // Welcome message
+      setTimeout(() => {
+        alert(`Welcome ${data.user.name}! Google login successful. You're now logged in.`);
+      }, 300);
+      
+    } else {
+      throw new Error(data.message || 'Google login failed');
+    }
+    
+  } catch (error) {
+    console.error('Google login error:', error);
+    showLoginError('Google login failed. Please try again or use email.');
+  }
+}
+
+// ============================================
+// LOGOUT
+// ============================================
+function logout() {
+  // Clear local storage (except remember me preference)
+  const rememberMe = localStorage.getItem('charmers_remember_me');
+  const savedEmail = localStorage.getItem('charmers_saved_email');
+  
+  localStorage.clear();
+  
+  // Restore remember me preference if needed
+  if (rememberMe) {
+    localStorage.setItem('charmers_remember_me', rememberMe);
+  }
+  if (savedEmail) {
+    localStorage.setItem('charmers_saved_email', savedEmail);
+  }
+  
+  // Update UI
+  updateUIForLoggedOutUser();
+  
+  // Close dropdown if open
+  hideUserDropdown();
+  
+  // Show logout message
+  alert('You have been logged out successfully.');
+}
+
+// ============================================
+// USER DROPDOWN
+// ============================================
+function toggleUserDropdown() {
+  document.getElementById('userDropdown').classList.toggle('active');
+}
+
+function hideUserDropdown() {
+  document.getElementById('userDropdown').classList.remove('active');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const userMenu = document.querySelector('.user-menu-container');
+  const dropdown = document.getElementById('userDropdown');
+  
+  if (!userMenu.contains(event.target) && dropdown.classList.contains('active')) {
+    dropdown.classList.remove('active');
+  }
+});
+
+// ============================================
+// SOCIAL SHARING
+// ============================================
+function shareOnFacebook() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Check out Charmers - beautiful bracelets starting at just $5!');
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank', 'width=600,height=400');
+}
+
+function shareOnTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Love these bracelets from @Charmers! Starting at just $5.');
+  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+}
+
+function shareOnPinterest() {
+  const url = encodeURIComponent(window.location.href);
+  const media = encodeURIComponent('https://charmersbiz.org/images/bracelets.jpg');
+  const description = encodeURIComponent('Charmers Bracelets - Beautiful handmade accessories starting at $5');
+  window.open(`https://pinterest.com/pin/create/button/?url=${url}&media=${media}&description=${description}`, '_blank', 'width=600,height=400');
+}
+
+function shareOnWhatsApp() {
+  const text = encodeURIComponent('Check out Charmers bracelets! Beautiful handmade accessories starting at just $5: ' + window.location.href);
+  window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+// ============================================
+// HELPER FUNCTIONS
+// ============================================
+function showLoginError(message) {
+  const errorEl = document.getElementById('loginError');
+  errorEl.textContent = message;
+  errorEl.classList.add('active');
+  document.getElementById('loginSuccess').classList.remove('active');
+  
+  // Auto-hide after 5 seconds
+  setTimeout(() => {
+    errorEl.classList.remove('active');
+  }, 5000);
+}
+
+function showLoginSuccess(message) {
+  const successEl = document.getElementById('loginSuccess');
+  successEl.textContent = message;
+  successEl.classList.add('active');
+  document.getElementById('loginError').classList.remove('active');
+}
+
+function showForgotPassword() {
+  const email = prompt('Enter your email address to reset your password:');
+  if (email && validateEmail(email)) {
+    alert(`Password reset instructions have been sent to ${email}. Please check your inbox.`);
+    // In a real implementation, you would call your backend here
+    // fetch(`${BACKEND_URL}/api/auth/forgot-password`, { method: 'POST', body: JSON.stringify({ email }) });
+  } else if (email) {
+    alert('Please enter a valid email address.');
+  }
+}
+
+// ============================================
+// EXISTING PAGE FUNCTIONS (from your original code)
+// ============================================
+let currentSection = 'home';
+
+function showSection(sectionId) {
+  // Your existing showSection() implementation
+  document.getElementById(currentSection).classList.add('hidden');
+  document.getElementById(sectionId).classList.remove('hidden');
+  currentSection = sectionId;
+  window.scrollTo(0, 0);
+  
+  // Close user dropdown if open
+  hideUserDropdown();
+}
+
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+
+function showProduct(productType) {
+  // Your existing product handling
+  alert(`You selected the ${productType} bracelet. This would open the purchase options.`);
+}
+
+// ============================================
+// INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+  // Check auth state on page load
+  checkAuthState();
+  
+  // Close login modal when clicking on overlay
+  document.getElementById('loginModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+      hideLoginModal();
+    }
+  });
+  
+  // Close login modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && document.getElementById('loginModal').classList.contains('active')) {
+      hideLoginModal();
+    }
+  });
+  
+  // Auto-refresh token every 10 minutes if logged in
+  setInterval(async () => {
+    if (currentUser) {
+      await refreshAccessToken();
+    }
+  }, 10 * 60 * 1000);
+});
+
+// Token refresh function
+async function refreshAccessToken() {
+  const refreshToken = localStorage.getItem('charmers_refresh_token');
+  
+  if (!refreshToken || !currentUser) return false;
+  
+  try {
+    const response = await fetch(`${BACKEND_URL}/api/auth/refresh`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ refreshToken })
+    });
+    
+    const data = await response.json();
+    
+    if (data.success) {
+      localStorage.setItem('charmers_access_token', data.tokens.accessToken);
+      localStorage.setItem('charmers_refresh_token', data.tokens.refreshToken);
+      return true;
+    }
+  } catch (error) {
+    console.warn('Token refresh failed:', error);
+  }
+  
+  return false;
+}
+</script>
+</body>
+</html>
